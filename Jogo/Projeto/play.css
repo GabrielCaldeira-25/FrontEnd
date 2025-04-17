@@ -1,0 +1,223 @@
+
+*{
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+#jogo{
+    background-image: url('espaço.png');
+    position: absolute;
+    z-index: 2;
+    left:23%;
+    top: 20%;
+    border: 2px solid black;
+}
+#modalGameOver {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #f44336;
+    font-family: 'pixel';
+}
+
+#modalGameOver .modal-content {
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+   
+}
+
+#modalGameOver h1 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+#modalGameOver button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-family: 'pixel';
+}
+
+#modalGameOver button:hover {
+    background-color: #d32f2f;
+}
+
+#modalWin {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 48px;
+  z-index: 1000;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'pixel';
+}
+  #modalWin p {
+    margin: 0;
+  }
+  #modalWin a{
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-family: 'pixel';
+    text-decoration: none;
+  }
+  #modalWin a:hover{
+    background-color: #ddd;
+  }
+  
+  #modalWin button {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-family: 'pixel';
+  }
+  .align{
+    display: flex;
+    flex-direction: column;
+    margin-left: 800px;
+    margin-right: 800px;
+  }
+  
+  #modalWin button:hover {
+    background-color: #ddd;
+  }
+  .espaco {
+    position: relative;
+}
+.fundo {
+   position: absolute;
+    z-index: 0;
+}
+
+.foguete {
+    padding-left: 1370px;
+    padding-top: 200px;
+    position: absolute;
+    width: 600px;
+    z-index: 1;
+}
+img{
+  filter:brightness(50%);
+}
+@font-face {
+  font-family: 'pixel';
+  src: url('Pixel\ Emulator.otf');
+}
+.nome{
+  position: absolute;
+  z-index: 1;
+  font-size: 80px;
+  font-family: 'pixel';
+  color: yellow;
+  text-shadow: 6px 6px 0 black;
+  display: flex;
+  left: 32%;
+  padding-top: 22px;
+  
+}
+.lista {
+  position: absolute;
+  top: 115px;
+  left: 956px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+.espaco a{
+  text-decoration: none;
+  color: yellow;
+  font-family: 'pixel';
+  font-size: 26px;
+  text-shadow: 5px 5px 0 black;
+  gap: 20px;
+}
+.espaco a::before {
+  content: '➤'; 
+  opacity: 0;
+  margin-right: 2px;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(-5px);
+}
+
+.espaco a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+#telaInicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: yellow;
+  font-family: 'pixel';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+#telaInicio button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 24px;
+  font-family: 'pixel';
+  cursor: pointer;
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+#telaInicio button:hover {
+  opacity:0.7;
+}
+.instru , .instru1{
+  font-size: 20px;
+}
